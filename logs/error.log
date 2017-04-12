@@ -1,0 +1,1 @@
+[Wed Apr 12 15:12:29.004255 2017] [:error] [pid 20546] [client 127.0.0.1:45440] PHP Fatal error:  Class 'App\\Events\\Event' not found in /var/www/nv-laravel-events-test.com/www/app/Events/EventName.php on line 13
