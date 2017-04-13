@@ -38,7 +38,7 @@ class ChartsResultController extends Controller
 
 		for ( $i = 0; $i < $countCharts; ++$i ) {
 			$questionsId[$i] = $charts[$i]['question_id'];
-			$renderCharts[$i] = Charts::create($charts[$i]['type'], 'highcharts')
+			$renderCharts[$i] = Charts::create($charts[$i]['type'], 'google')
 				->title($charts[$i]['title'])
 				->labels(json_decode($charts[$i]['labels']))
 				->values(json_decode($charts[$i]['values']))
@@ -125,7 +125,7 @@ class ChartsResultController extends Controller
 	{
 		$chart = ChartsResult::find(request('chart'));
 
-		return Charts::create(request('type'), 'highcharts')
+		return Charts::create(request('type'), 'google')
 			->title($chart['title'])
 			->labels(json_decode($chart['labels']))
 			->values(json_decode($chart['values']))
