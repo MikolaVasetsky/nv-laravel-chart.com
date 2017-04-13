@@ -1,6 +1,6 @@
 <?php
 Route::get('fire', function () {
-    event(new App\Events\EventName());
+    event(new App\Events\ChangeChart(2));
     return "event fired";
 });
 
